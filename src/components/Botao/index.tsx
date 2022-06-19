@@ -9,11 +9,16 @@ interface IProps {
 }
 class Botao extends React.Component<IProps> {
   render() {
-    const { type = "button" } = this.props;
+    const { type = "button", children } = this.props;
 
+    // return (
+    //   <button type={this.props.type} className={style.botao}>
+    //     {this.props.children}
+    //   </button>
+    // );
     return (
       <button type={type} className={style.botao}>
-        {this.props.children}
+        {children}
       </button>
     );
   }
