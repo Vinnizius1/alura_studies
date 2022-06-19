@@ -12,7 +12,8 @@ class Formulario extends React.Component<{setTarefas: React.Dispatch<React.SetSt
   // MÉTODO
   adicionarTarefa(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    console.log("state: ", this.state);
+    // console.log("state: ", this.state);
+    this.props.setTarefas(tarefasAntigas => [...tarefasAntigas, {...this.state}])
   }
 
   render() {
